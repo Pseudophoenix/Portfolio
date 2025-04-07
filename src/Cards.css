@@ -1,35 +1,71 @@
 .card {
   position: fixed;
   top: 0;
-  left: 240px;
-  width: calc(100% - 240px);
+  right: 0px;
+  width: calc(100% - 270px);
   height: 100%;
   background: #fff;
   transition: right 0.5s ease-in-out;
   z-index: 99;
   transform: translateY(0) scale(1);
   transition:
-    right 0.5s ease-in-out,
-    transform 0.5s ease-in-out;
+  right 0.5s ease-in-out,
+  transform 0.5s ease-in-out;
+}
+
+.cross-button-open {
+  position: absolute;
+  left: -200%;
+}
+
+.cross-button-closed {
+  position: absolute;
+  left: -200%;
 }
 
 @media (max-width: 768px) {
   .card {
     width: 100%;
-    z-index: 100;
+    left:0%;
+  }
+  .cross-button-open {
+    display: flex;
+    position: relative;
+    left: 0%;
+    align-items: center;
+
+    width: 40px;
+    border-color: transparent;
+    background-color: transparent;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    justify-content: center;
+    color: var(--clr);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+    transition: transform 0.1s, box-shadow 0.1s;
+    
+  }
+  
+  
+  .cross-button-open:active {
+    transform: translateY(2px); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  .cross-button-open:hover {
+    
   }
 }
 
-.card-visible {
-  right: 0;
-}
-/* .card-visible:hover {
-  
-} */
-
 .card-content {
   padding: 20px;
-  color: #333;
+  color: hwb(0 20% 80%);
 }
 
 .card-content h3 {
@@ -38,36 +74,29 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  background: #222;
-  color: rgba(255, 255, 255, 0);
   font-family: Arial, sans-serif;
-}
+} 
 
-/* Add these new styles to your existing Cards.css */
 .card-header {
   padding: 20px;
   background: #00ade1;
   color: white;
   border-bottom: 1px solid #e0e0e0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  /* border-top-left-radius: 8px; */
-  /* border-bottom-left-radius: 8px; */
+  display: flex;
+  flex-direction: row;
 }
 
 .card-header h2 {
   margin: 0;
   font-size: 1.8rem;
+  width: 100%;
 }
 
 .card-body {
   padding: 20px;
   height: calc(100% - 80px);
-  background-color: transparent;
-  /* Adjust based on header height */
-  overflow-y: auto;
-  /* Enable scrolling if content is long */
+  background-color: white;
 }
 
 .card-body p {
@@ -78,5 +107,5 @@ body {
 
 .card-content {
   margin-top: 20px;
-  /* Add additional styling for content sections */
+ 
 }

@@ -1,18 +1,41 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CardMenu from './CardMenu';
-import { HomeCard, AboutCard, ServicesCard, TeamCard } from './Cards';
+import { HomeCard, AboutCard, EducationCard, ProjectCard, BlogCard } from './Cards';
+import { useState } from 'react';
+
 function App() {
+  const [isNavBarClosed, setIsNavBarClosed] = useState(true);
+
   return (
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: '100vh',
+      color: 'white',
+      textAlign: 'center',
+      padding: '2rem',
+    }}>
     <Router>
-      <CardMenu></CardMenu>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <CardMenu 
+          isNavBarClosed={isNavBarClosed} 
+          setIsNavBarClosed={setIsNavBarClosed}  // ✅ Pass the setter directly
+        />
+      </div>
+
       <Routes>
-        <Route path="/" element={<HomeCard />} />
-        <Route path="/home" element={<HomeCard />} />
-        <Route path="/about" element={<AboutCard />} />
-        <Route path="/services" element={<ServicesCard />} />
-        <Route path="/team" element={<TeamCard />} />
+        {/* Pass UPDATED STATE CONSISTENTLY to all cards */}
+        <Route path="/" element={<HomeCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
+        <Route path="/home" element={<HomeCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
+        <Route path="/about" element={<AboutCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
+        <Route path="/education" element={<EducationCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
+        <Route path="/blog" element={<BlogCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
+        <Route path="/project" element={<ProjectCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
       </Routes>
     </Router>
+    </div>
   );
 }
 

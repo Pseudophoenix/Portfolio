@@ -1,57 +1,65 @@
 import { useLocation } from 'react-router-dom';
 import './Cards.css';
-const HomeCard = () => {
+import { useState } from 'react';
+import { FaX, FaBars } from 'react-icons/fa6';
+import { NavLink } from 'react-router-dom';
+// import Card from './Card.jsx';
+const HomeCard = ({isNavBarClosed,setIsNavBarClosed}) => {
   const location = useLocation();
   const isActive = location.pathname === '/' || location.pathname === '/home';
 
   return (
     <div className={`card ${isActive ? 'card-visible' : ''}`}>
-      <div className='card-header'>
+      <div className='card-header' style={{'--clr':' #00ade1'}}>
         <h2>Intro</h2>
+        <NavLink to="/" className={isNavBarClosed?'cross-button-closed':'cross-button-open'} onClick={()=>setIsNavBarClosed(!isNavBarClosed)}><FaBars/></NavLink>
       </div>
-      {/* <div className='card-body'> */}
-        {/* <h2>Home</h2> */}
-        <div className="card-content">
-          <h3>Welcome Home!</h3>
-          {/* <AboutCard></AboutCard> */}
-          {/* <p>This is the home card content. You can put anything here.</p> */}
-        {/* </div> */}
+      {/* <h2>Home</h2> */}
+      <div className="card-content">
+        <h3>Alok!</h3>   
+          <ul>
+            <li>Pursing Bachelors From IIIT Manipur</li>
+            <li>Secondary Education Dayawati Modi Public School, Modinagar</li>
+          </ul>
       </div>
     </div>
   );
 };
 
-const AboutCard = () => {
+const AboutCard = ({isNavBarClosed,setIsNavBarClosed}) => {
   const location = useLocation();
   const isActive = location.pathname === '/about';
 
   return (
     <div className={`card ${isActive ? 'card-visible' : ''}`} >
-        <div className='card-header' style={{ background: '#ff6493' }}>
-          <h2>About</h2>
-        </div>
-        <div className='card-body'>
-          
-        </div>
+      <div className='card-header' style={{ background: '#ff4443','--clr': '#ff4443' }}>
+        <h2>About</h2>
+        <NavLink to="/" className={isNavBarClosed?'cross-button-closed':'cross-button-open'} onClick={()=>setIsNavBarClosed(!isNavBarClosed)}><FaBars/></NavLink>
+      </div>
+      I am 
+      <div className='card-body'>
+        I am a 
+      </div>
     </div>
   );
 };
 
-const ServicesCard = () => {
+const EducationCard = ({isNavBarClosed,setIsNavBarClosed}) => {
   const location = useLocation();
   const isActive = location.pathname === '/services';
 
   return (
     <div className={`card ${isActive ? 'card-visible' : ''}`}>
-      <div className='card-header' style={{ background: '#ffdd1c' }}>
-        <h2>Services</h2>
+      <div className='card-header' style={{ background: '#ffdd1c','--clr':'#ffdd1c' }}>
+        <h2>Education</h2>
+        <NavLink to="/" className={isNavBarClosed?'cross-button-closed':'cross-button-open'} onClick={()=>setIsNavBarClosed(!isNavBarClosed)}><FaBars/></NavLink>
       </div>
       <div className='card-body'>
-        <h2>Services</h2>
+        <h2 style={{color:'black'}}>Education</h2>
         <div className="card-content">
-          <h3>Our Services</h3>
+          <h3></h3>
 
-          <p>Discover what we can do for you.</p>
+          <p></p>
         </div>
       </div>
 
@@ -59,19 +67,21 @@ const ServicesCard = () => {
   );
 };
 
-const TeamCard = () => {
+
+const BlogCard = ({isNavBarClosed,setIsNavBarClosed}) => {
   const location = useLocation();
   const isActive = location.pathname === '/team';
 
   return (
     <div className={`card ${isActive ? 'card-visible' : ''}`}>
-      <div className='card-header' style={{ background: '#7bfb00' }}>
-        <h2>Team</h2>
+      <div className='card-header' style={{ background: '#ff0dff','--clr': '#ff0dff' }}>
+        <h2>Blog</h2>
+        <NavLink to="/" className={isNavBarClosed?'cross-button-closed':'cross-button-open'} onClick={()=>setIsNavBarClosed(!isNavBarClosed)}><FaBars/></NavLink>
       </div>
       <div className='card-body'>
-        <h2>Team</h2>
+        <h2 style={{color:'black'}}>Blog</h2>
         <div className="card-content">
-          <h3>Our Team</h3>
+          <h3>My Projects</h3>
 
           <p>Discover what we can do for you.</p>
         </div>
@@ -81,4 +91,28 @@ const TeamCard = () => {
   );
 };
 
-export { HomeCard, AboutCard, ServicesCard, TeamCard };
+
+const ProjectCard = ({isNavBarClosed,setIsNavBarClosed}) => {
+  const location = useLocation();
+  const isActive = location.pathname === '/team';
+
+  return (
+    <div className={`card ${isActive ? 'card-visible' : ''}`}>
+      <div className='card-header' style={{ background: '#7bfb00','--clr': '#7bfb00'  }}>
+        <h2>Project</h2>
+        <NavLink to="/" className={isNavBarClosed?'cross-button-closed':'cross-button-open'} onClick={()=>setIsNavBarClosed(!isNavBarClosed)}><FaBars/></NavLink>
+      </div>
+      <div className='card-body'>
+        <h2>Project</h2>
+        <div className="card-content">
+          <h3>My Projects</h3>
+
+          <p>Discover what we can do for you.</p>
+        </div>
+      </div>
+
+    </div>
+  );
+};
+
+export { HomeCard, AboutCard, EducationCard, ProjectCard,BlogCard };

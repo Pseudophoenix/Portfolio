@@ -1,0 +1,79 @@
+.container {
+  position: relative;
+  height: 100vh;
+
+  display: flex;
+  /* justify-content: flex-start; */
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.menu li {
+  position: relative;
+  list-style: none;
+}
+
+.menu li a {
+  position: relative;
+  font-size: 2em;
+  text-decoration: none;
+  line-height: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff80;
+}
+
+.menu li a::before {
+  content: attr(data-text);
+  position: absolute;
+  color: var(--clr);
+  width: 0;
+  overflow: hidden;
+  transition: 1s;
+  border-right: 8px solid var(--clr);
+  -webkit-text-stroke: 1px var(--clr);
+}
+
+.menu li a:hover::before {
+  width: 100%;
+  filter: drop-shadow(0 0 25px var(--clr));
+}
+
+.card {
+  position: fixed;
+  top: -150%;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background: #fff;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+  transition: right 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+.card-visible {
+  top: 20%;
+  width: 100%;
+}
+
+.card-content {
+  padding: 20px;
+  color: #333;
+}
+
+.card-content button {
+  margin-top: 20px;
+  padding: 8px 16px;
+  background: #00ade1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

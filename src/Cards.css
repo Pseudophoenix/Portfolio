@@ -1,0 +1,82 @@
+.card {
+  position: fixed;
+  top: 0;
+  left: 240px;
+  width: calc(100% - 240px);
+  height: 100%;
+  background: #fff;
+  transition: right 0.5s ease-in-out;
+  z-index: 99;
+  transform: translateY(0) scale(1);
+  transition:
+    right 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    z-index: 100;
+  }
+}
+
+.card-visible {
+  right: 0;
+}
+/* .card-visible:hover {
+  
+} */
+
+.card-content {
+  padding: 20px;
+  color: #333;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  color: #00ade1;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #222;
+  color: rgba(255, 255, 255, 0);
+  font-family: Arial, sans-serif;
+}
+
+/* Add these new styles to your existing Cards.css */
+.card-header {
+  padding: 20px;
+  background: #00ade1;
+  color: white;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  /* border-top-left-radius: 8px; */
+  /* border-bottom-left-radius: 8px; */
+}
+
+.card-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.card-body {
+  padding: 20px;
+  height: calc(100% - 80px);
+  background-color: transparent;
+  /* Adjust based on header height */
+  overflow-y: auto;
+  /* Enable scrolling if content is long */
+}
+
+.card-body p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.card-content {
+  margin-top: 20px;
+  /* Add additional styling for content sections */
+}

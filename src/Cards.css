@@ -33,7 +33,6 @@
     position: relative;
     left: 0%;
     align-items: center;
-
     width: 40px;
     border-color: transparent;
     background-color: transparent;
@@ -48,18 +47,80 @@
     color: var(--clr);
     border: none;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.689);
+                /* 0 6px 0 #3e8e41;  */
     transition: transform 0.1s, box-shadow 0.1s;
-    
   }
   
+  .cross-button-closed {
+    display: flex;
+    position: relative;
+    left: 0%;
+    align-items: center;
+    width: 40px;
+    border-color: transparent;
+    background-color: transparent;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    justify-content: center;
+    color: var(--clr);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.689);
+                /* 0 6px 0 #3e8e41; */
+    transition: all 0.1s ease;
+    /* transition: transform 0.1s, box-shadow 0.1s; */
+  }
   
   .cross-button-open:active {
-    transform: translateY(2px); 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    display: flex;
+    position: relative;
+    left: 0%;
+    align-items: center;
+    width: 40px;
+    border-color: transparent;
+    background-color: transparent;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: white;
+    justify-content: center;
+    color: var(--clr);
+    border: none;
+    border-radius: 5px;
+    transform: translateY(4px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.1s, box-shadow 0.1s;
   }
   .cross-button-open:hover {
-    
+    display: flex;
+    position: relative;
+    left: 0%;
+    align-items: center;
+    width: 40px;
+    border-color: transparent;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    font-size: 16px;
+    cursor: pointer;
+    /* background-color: var(--clr); */
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    /* color: white; */
+    transition: transform 0.1s, box-shadow 0.1s; 
   }
 }
 

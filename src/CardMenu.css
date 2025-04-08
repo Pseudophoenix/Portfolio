@@ -9,11 +9,19 @@
   z-index: 100;
   padding-left: 20px;
   padding-right: 25px;
+  justify-content: space-evenly;
   /* transition: linear 0.5s ease-in-out; */
 }
 
 .menu-container-visible {
-  /* left: 0;  */
+  display: flex; 
+  flex-direction: column-reverse;
+}
+
+.menu-container-hidden {
+  display: flex; 
+  flex-direction: column-reverse;
+  
 }
 
 .menu {
@@ -75,6 +83,8 @@
 @media (max-width: 768px) {
   .menu-container {
     transition: left 0.5s linear; 
+    flex-direction: column-reverse;  
+    /* flex-wrap: wrap-reverse; */
   }
   
   .menu-container-hidden {
@@ -110,4 +120,34 @@
     height: 40px;
     background-color: white;
   }
+}
+
+.menu-background {
+  position: relative; /* Changed from absolute to relative for better flow */
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  max-width: 300px; /* Adjust this as needed */
+  aspect-ratio: 1/1; /* Ensures perfect square container */
+  margin: 0 auto;
+  background-color: hwb(0 20% 80%);
+  z-index: -1;
+  padding: 20px; /* Reduced padding for better proportions */
+}
+
+.menu-background img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  object-fit: cover;
+  aspect-ratio: 1/1; /* Ensures image maintains square proportions */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.689);
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+/* Optional hover effect */
+.menu-background img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+  transition: transform 0.5s, box-shadow 0.5s;
 }

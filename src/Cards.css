@@ -1,10 +1,9 @@
 .card {
   overflow: scroll;
-  
   position: fixed;
   top: 0;
   right: 0px;
-  width: calc(100% - 390px);
+  width: calc(100% - 408px);
   height: 100%;
   background: #fff;
   transition: right 0.5s ease-in-out;

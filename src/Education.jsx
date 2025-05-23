@@ -296,7 +296,7 @@ import './Education.css';
 
 const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
+const isActive = location.pathname === '/education';
   const educationData = [
     {
       title: "College Degree",
@@ -307,7 +307,7 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
         "https://storage.googleapis.com/portfolio-pseudophoenix/1000006407%20(3).jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG_20240201_202220.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/al10906_SIH_MT_DAY_20122023_458_0.JPG",
-      
+
       ]
     },
     {
@@ -351,17 +351,25 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   };
 
   return (
-    <div className={`education-container ${isNavBarClosed ? 'sidebar-closed' : 'sidebar-open'}`}>
-      <div className='education-header' style={{ background: '#ffdd1c' }}>
+    // <div className={`education-container ${isNavBarClosed ? 'sidebar-closed' : 'sidebar-open'}`}>
+    //   <div className='education-header' style={{ background: '#ffdd1c' }}>
+    //     <h2>Education</h2>
+    //     {/* <NavLink
+    //       to="/"
+    //       className="cross-button"
+    //       onClick={() => setIsNavBarClosed(!isNavBarClosed)}
+    //     >
+    //       <FaBars />
+    //     </NavLink> */}
+    //   </div>
+    <div className={`card ${isActive ? 'card-visible' : ''}`}>
+      <div className='card-header' style={{ background: '#ffdd1c', '--clr': '#ffdd1c' }}>
         <h2>Education</h2>
-        {/* <NavLink
-          to="/"
-          className="cross-button"
-          onClick={() => setIsNavBarClosed(!isNavBarClosed)}
-        >
+        <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}>
           <FaBars />
-        </NavLink> */}
+        </NavLink>
       </div>
+      <div className='card-body'>
 
       <div className='education-content'>
         {educationData.map((edu, index) => (
@@ -458,6 +466,7 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

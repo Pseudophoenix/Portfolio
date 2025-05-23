@@ -15,7 +15,7 @@ const CardMenu = ({ isNavBarClosed, setIsNavBarClosed }) => {
     <div
       // className={`menu-container ${isNavBarClosed ? 'menu-container-visible' : 'menu-container-hidden'}`}
       className={`menu-container ${isNavBarClosed ? 'menu-container-visible' : 'menu-container-hidden'}`}
-      style={location.pathname === '/' ? { width: '100%' } : { width: "" }}
+      style={location.pathname === '/' ? { width: '100%' } : {width:""}}
     >
       <ul className="menu">
         <li style={{ '--clr': '#00ade1' }}>
@@ -63,7 +63,7 @@ const CardMenu = ({ isNavBarClosed, setIsNavBarClosed }) => {
             &nbsp;Project&nbsp;
           </NavLink>
         </li>
-
+            
         <li style={{ '--clr': '#7bfb99' }}>
           <NavLink
             to="/contact"

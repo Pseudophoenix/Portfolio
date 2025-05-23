@@ -25,14 +25,14 @@ const HomeCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   );
 };
 
-const AboutCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
+const SkillsCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   const location = useLocation();
-  const isActive = location.pathname === '/about';
+  const isActive = location.pathname === '/Skills';
 
   return (
     <div className={`card ${isActive ? 'card-visible' : ''}`} >
       <div className='card-header' style={{ background: '#ff4443', '--clr': '#ff4443' }}>
-        <h2>About for Alok</h2>
+        <h2>Skills for Alok</h2>
         <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
       </div>
       <div className='card-body'>
@@ -111,4 +111,4 @@ const AboutCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
 //   );
 // };
 
-export { HomeCard, AboutCard, EducationCard, ProjectCard, BlogCard };
+export { HomeCard, SkillsCard, EducationCard, ProjectCard, BlogCard };

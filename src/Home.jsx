@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CardMenu from './CardMenu';
-import { HomeCard, AboutCard, EducationCard, ProjectCard, BlogCard } from './Cards';
+import { HomeCard, SkillsCard, EducationCard, ProjectCard, BlogCard } from './Cards';
 import { useState } from 'react';
 
 function App() {
@@ -36,7 +36,7 @@ function App() {
         {/* Pass UPDATED STATE CONSISTENTLY to all cards */}
         {/* <Route path="/" element={<CardMenu isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} /> */}
         <Route path="/home" element={<HomeCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
-        <Route path="/about" element={<AboutCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
+        <Route path="/Skills" element={<SkillsCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
         <Route path="/education" element={<EducationCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
         <Route path="/blog" element={<BlogCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
         <Route path="/project" element={<ProjectCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />

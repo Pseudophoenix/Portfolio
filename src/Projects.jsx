@@ -147,8 +147,8 @@ const projects = [
     description: "A responsive portfolio with smooth animations.",
     tools: ["React", "GSAP", "Tailwind"],
     githubLink: "https://github.com/yourusername/portfolio",
-    liveLink: "https://your-portfolio.com",
-    previewUrl: "https://your-portfolio.com"
+    liveLink: "https://www.linkedin.com/in/alok-choudhary-9465401ab/",
+    previewUrl: "https://www.linkedin.com/in/alok-choudhary-9465401ab/"
   }
 ];
 

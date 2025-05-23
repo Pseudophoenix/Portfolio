@@ -15,7 +15,7 @@ const CardMenu = ({ isNavBarClosed, setIsNavBarClosed }) => {
     <div
       // className={`menu-container ${isNavBarClosed ? 'menu-container-visible' : 'menu-container-hidden'}`}
       className={`menu-container ${isNavBarClosed ? 'menu-container-visible' : 'menu-container-hidden'}`}
-      style={location.pathname === '/' ? { width: '100%' } : {width:""}}
+      style={location.pathname === '/' ? { width: '100%' } : { width: "" }}
     >
       <ul className="menu">
         <li style={{ '--clr': '#00ade1' }}>
@@ -29,11 +29,11 @@ const CardMenu = ({ isNavBarClosed, setIsNavBarClosed }) => {
         </li>
         <li style={{ '--clr': '#ff4443' }}>
           <NavLink
-            to="/about"
-            data-text="&nbsp;About"
+            to="/Skills"
+            data-text="&nbsp;Skills"
             onClick={() => setIsNavBarClosed(!isNavBarClosed)}
           >
-            &nbsp;About&nbsp;
+            &nbsp;Skills&nbsp;
           </NavLink>
         </li>
         <li style={{ '--clr': '#ffdd1c' }}>
@@ -63,15 +63,7 @@ const CardMenu = ({ isNavBarClosed, setIsNavBarClosed }) => {
             &nbsp;Project&nbsp;
           </NavLink>
         </li>
-                <li style={{ '--clr': '#7b0099' }}>
-          <NavLink
-            to="/skills"
-            data-text="&nbsp;Skills"
-            onClick={() => setIsNavBarClosed(!isNavBarClosed)}
-          >
-            &nbsp;Skills&nbsp;
-          </NavLink>
-        </li>
+
         <li style={{ '--clr': '#7bfb99' }}>
           <NavLink
             to="/contact"

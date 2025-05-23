@@ -1,0 +1,166 @@
+.blog-editor-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.blog-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.blog-title-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.render-button {
+  padding: 8px 16px;
+  background-color: #ff0dff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.render-button:hover {
+  background-color: #e00ce0;
+}
+
+.blog-editor-columns {
+  display: flex;
+  gap: 15px;
+  height: calc(100% - 50px);
+}
+
+.editor-column, .preview-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-column h3, .preview-column h3 {
+  margin-top: 0;
+  color: #333;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.code-editor {
+  flex-grow: 1;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none;
+  background-color: #f5f5f5;
+}
+
+.html-editor {
+  border-left: 3px solid #ff0dff;
+}
+
+.css-editor {
+  border-left: 3px solid #0066cc;
+}
+
+.blog-preview {
+  flex-grow: 1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.preview-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.save-button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.save-button:hover {
+  background-color: #45a049;
+}
+
+.save-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.blog-posts-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.blog-posts-section h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.blog-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.blog-post-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.blog-post-card h3 {
+  padding: 15px;
+  margin: 0;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+}
+
+.blog-post-preview {
+  height: 200px;
+  overflow: hidden;
+}
+
+.blog-post-preview iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none; /* Prevent interaction with the iframe content */
+}
+
+.blog-post-meta {
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  font-size: 12px;
+  color: #666;
+}
+
+.error-message {
+  color: #ff0000;
+  padding: 10px;
+  background-color: #ffeeee;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}

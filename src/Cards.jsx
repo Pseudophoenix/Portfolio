@@ -2,7 +2,10 @@ import { useLocation } from 'react-router-dom';
 import './Cards.css';
 import { useState } from 'react';
 import { FaX, FaBars } from 'react-icons/fa6';
+import BlogCard from './Blog';
+import EducationCard from './Education';
 import { NavLink } from 'react-router-dom';
+import ProjectCard from './Projects';
 // import Card from './Card.jsx';
 const HomeCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   const location = useLocation();
@@ -29,7 +32,7 @@ const AboutCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   return (
     <div className={`card ${isActive ? 'card-visible' : ''}`} >
       <div className='card-header' style={{ background: '#ff4443', '--clr': '#ff4443' }}>
-        <h2>About</h2>
+        <h2>About for Alok</h2>
         <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
       </div>
       <div className='card-body'>
@@ -38,70 +41,74 @@ const AboutCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   );
 };
 
-const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
-  const location = useLocation();
-  const isActive = location.pathname === '/services';
+// const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
+//   const location = useLocation();
+//   const isActive = location.pathname === '/services';
 
-  return (
-    <div className={`card ${isActive ? 'card-visible' : ''}`}>
-      <div className='card-header' style={{ background: '#ffdd1c', '--clr': '#ffdd1c' }}>
-        <h2>Education</h2>
-        <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
-      </div>
-      <div className='card-body'>
-        <h2 style={{ color: 'black' }}>Education</h2>
-        <div className="card-content">
-          <h3></h3>
-          <p></p>
-        </div>
-      </div>
+//   return (
 
-    </div>
-  );
-};
+//             <Education
+//           isActive={true}  // Controls visibility (e.g., based on route)
+//           isNavBarClosed={isNavBarClosed}  // State for navbar toggle
+//           setIsNavBarClosed={setIsNavBarClosed}  // Setter function
+//         />
+//     // <div className={`card ${isActive ? 'card-visible' : ''}`}>
+//     //   <div className='card-header' style={{ background: '#ffdd1c', '--clr': '#ffdd1c' }}>
+//     //     <h2>Education</h2>
+//     //     <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
+//     //   </div>
+//     //   <div className='card-body'>
 
-
-const BlogCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
-  const location = useLocation();
-  const isActive = location.pathname === '/team';
-
-  return (
-    <div className={`card ${isActive ? 'card-visible' : ''}`}>
-      <div className='card-header' style={{ background: '#ff0dff', '--clr': '#ff0dff' }}>
-        <h2>Blog</h2>
-        <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
-      </div>
-      <div className='card-body'>
-        <h2 style={{ color: 'black' }}>Blog</h2>
-        <div className="card-content">
-          <h3></h3>
-        </div>
-      </div>
-
-    </div>
-  );
-};
+//     //     <h2 style={{ color: 'black' }}></h2>
+//     //     <div className="card-content">
+//     //     </div>
+//     //   </div>
+//     // </div>
+//   );
+// };
 
 
-const ProjectCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
-  const location = useLocation();
-  const isActive = location.pathname === '/team';
+// const BlogCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
+//   const location = useLocation();
+//   const isActive = location.pathname === '/team';
 
-  return (
-    <div className={`card ${isActive ? 'card-visible' : ''}`}>
-      <div className='card-header' style={{ background: '#7bfb00', '--clr': '#7bfb00' }}>
-        <h2>Project</h2>
-        <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
-      </div>
-      <div className='card-body'>
-        <h2>Project</h2>
-        <div className="card-content">
-          <h3></h3>
-        </div>
-      </div>
+//   return (
+//     <div className={`card ${isActive ? 'card-visible' : ''}`}>
+//       <div className='card-header' style={{ background: '#ff0dff', '--clr': '#ff0dff' }}>
+//         <h2>Blog</h2>
+//         <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
+//       </div>
+//       <div className='card-body'>
+//         <h2 style={{ color: 'black' }}>Blog</h2>
+//         <div className="card-content">
+//           <h3></h3>
+//         </div>
+//       </div>
 
-    </div>
-  );
-};
+//     </div>
+//   );
+// };
+
+
+// const ProjectCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
+//   const location = useLocation();
+//   const isActive = location.pathname === '/team';
+
+//   return (
+//     <div className={`card ${isActive ? 'card-visible' : ''}`}>
+//       <div className='card-header' style={{ background: '#7bfb00', '--clr': '#7bfb00' }}>
+//         <h2>Project</h2>
+//         <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
+//       </div>
+//       <div className='card-body'>
+//         <h2>Project</h2>
+//         <div className="card-content">
+//           <h3></h3>
+//         </div>
+//       </div>
+
+//     </div>
+//   );
+// };
 
 export { HomeCard, AboutCard, EducationCard, ProjectCard, BlogCard };

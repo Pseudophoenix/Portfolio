@@ -10,12 +10,13 @@ function App() {
     <div style={{
       display: 'flex',
       flexDirection: 'column',
-      alignItems: 'center',
+      alignItems: 'end',
       justifyContent: 'center',
       height: '100vh',
       color: 'white',
+      // overflow:'hidden',
       textAlign: 'center',
-      padding: '2rem',
+      // padding: '2rem',
     }}>
     <Router>
       <div style={{ display: 'flex', flexDirection: 'column' }}>

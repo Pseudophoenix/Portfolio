@@ -1,8 +1,10 @@
 .card {
+  overflow: scroll;
+  
   position: fixed;
   top: 0;
   right: 0px;
-  width: calc(100% - 270px);
+  width: calc(100% - 390px);
   height: 100%;
   background: #fff;
   transition: right 0.5s ease-in-out;
@@ -156,7 +158,7 @@ body {
 
 .card-body {
   padding: 20px;
-  height: calc(100% - 80px);
+  height:800px;
   background-color: white;
 }
 

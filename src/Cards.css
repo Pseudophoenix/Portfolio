@@ -2,6 +2,7 @@
   overflow: scroll;
   position: fixed;
   top: 0;
+  scrollbar-width: none;
   right: 0px;
   width: calc(100% - 408px);
   height: 100%;

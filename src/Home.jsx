@@ -9,7 +9,7 @@ function App() {
   return (
     <div style={{
       margin:0,
-      width:"100%",
+      // width:"100%",
       display: 'flex',
       flexDirection: 'row',
       // alignItems: 'end',
@@ -19,7 +19,7 @@ function App() {
       overflow:'hidden',
       // textAlign: 'center',
       padding: '2rem',
-        height: 'calc(110vh - 0px)'
+        // height: 'calc(110vh - 0px)'
     }}>
     <Router>
       <div style={{ 

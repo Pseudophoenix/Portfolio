@@ -1,7 +1,7 @@
 import { NextResponse, NextRequest } from "next/server";
 import { PrismaClient } from "@/generated/prisma";
 import { v4 as uuidv4 } from 'uuid';
-const client = new PrismaClient();
+import client from "@/db";
 export async function POST(req: NextRequest, res: NextResponse) {
     const id = uuidv4();
     const response = NextResponse.next();

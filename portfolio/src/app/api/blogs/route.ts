@@ -1,7 +1,8 @@
 import { NextResponse, NextRequest } from "next/server";
 import { PrismaClient } from "@/generated/prisma";
 import { v4 as uuidv4 } from 'uuid';
-const client = new PrismaClient();
+// const client = new PrismaClient();
+import client from "@/db";
 export async function GET(req: NextRequest) {
     const res = NextResponse.next();
     // Set CORS headers
@@ -16,11 +17,11 @@ export async function GET(req: NextRequest) {
     const blogs = await client.blog.findMany();
     return NextResponse.json({ "blogs": blogs },
         {
-        headers: {
-            'Access-Control-Allow-Origin': 'http://localhost:5173',
-            'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-            'Access-Control-Allow-Headers': 'Content-Type',
-        },
+            headers: {
+                'Access-Control-Allow-Origin': 'http://localhost:5173',
+                'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type',
+            },
         }
     );
 }

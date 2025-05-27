@@ -2,7 +2,7 @@ import { NextResponse, NextRequest } from "next/server";
 import { PrismaClient } from "@/generated/prisma";
 import { v4 as uuidv4 } from 'uuid';
 // const client = new PrismaClient();
-import client from "@/db";
+import client from "@/db/index";
 export async function GET(req: NextRequest) {
     const res = NextResponse.next();
     // Set CORS headers

@@ -1,10 +1,12 @@
 import { useLocation } from 'react-router-dom';
 import './Cards.css';
+import SkillCard from './SkillCard';
 import { useState } from 'react';
 import { FaX, FaBars } from 'react-icons/fa6';
 import BlogCard from './Blog';
 import EducationCard from './Education';
 import { NavLink } from 'react-router-dom';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import ProjectCard from './Projects';
 // import Card from './Card.jsx';
 const HomeCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
@@ -27,15 +29,95 @@ const HomeCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
 
 const SkillsCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   const location = useLocation();
-  const isActive = location.pathname === '/Skills';
+  const isActive = location.pathname === '/skills';
+  const [hoveredSkill, setHoveredSkill] = useState(null);
+
+  // Sample skills data - replace with your actual skills
+  const skills = [
+    {
+      id: 1,
+      name: 'React',
+      image: '',
+      certificateLink: 'https://example.com/certificate1',
+      proficiency: 4, // out of 5
+      description: 'Building interactive UIs with React hooks and context API',
+      yearsExperience: 2,
+      projectsUsed: 10
+    },
+    {
+      id: 2,
+      name: 'JavaScript',
+      image: '/images/js-logo.png',
+      certificateLink: 'https://example.com/certificate2',
+      proficiency: 5,
+      description: 'Modern ES6+ JavaScript with functional programming',
+      yearsExperience: 4,
+      projectsUsed: 25
+    },
+    // Add more skills as needed
+  ];
 
   return (
-    <div className={`card ${isActive ? 'card-visible' : ''}`} >
+    // <div className={`card ${isActive ? 'card-visible' : ''}`} >
+    //   <div className='card-header' style={{ background: '#ff4443', '--clr': '#ff4443' }}>
+    //     <h2>Skills</h2>
+    //     <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
+    //   </div>
+    //   <div className='card-body'>
+    //   </div>
+    // </div>
+    <div className={`card ${isActive ? 'card-visible' : ''}`}>
       <div className='card-header' style={{ background: '#ff4443', '--clr': '#ff4443' }}>
-        <h2>Skills for Alok</h2>
-        <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
+        <h2>Skills</h2>
+        <NavLink
+          to="/"
+          className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'}
+          onClick={() => setIsNavBarClosed(!isNavBarClosed)}
+        >
+          <FaBars />
+        </NavLink>
       </div>
-      <div className='card-body'>
+
+      <div className='card-body skills-container'>
+        {skills.map((skill) => (
+          <div
+            key={skill.id}
+            className={`skill-wrapper ${hoveredSkill === skill.id ? 'skill-hovered' : ''}`}
+            onMouseEnter={() => setHoveredSkill(skill.id)}
+            onMouseLeave={() => setHoveredSkill(null)}
+          >
+            <SkillCard
+              name={skill.name}
+              image={skill.image}
+              certificateLink={skill.certificateLink}
+              proficiency={skill.proficiency}
+              description={skill.description}
+              yearsExperience={skill.yearsExperience}
+              projectsUsed={skill.projectsUsed}
+            />
+
+            {/* Proficiency bar */}
+            <div className="proficiency-bar">
+              <div
+                className="proficiency-level"
+                style={{ width: `${(skill.proficiency / 5) * 100}%` }}
+                data-proficiency={`${skill.proficiency}/5`}
+              ></div>
+            </div>
+
+            {/* Certificate link */}
+            {skill.certificateLink && (
+              <a
+                href={skill.certificateLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="certificate-link"
+              >
+                View Certificate <FaExternalLinkAlt />
+              </a>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

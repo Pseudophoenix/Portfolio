@@ -29,7 +29,7 @@ const CardMenu = ({ isNavBarClosed, setIsNavBarClosed }) => {
         </li>
         <li style={{ '--clr': '#ff4443' }}>
           <NavLink
-            to="/Skills"
+            to="/skills"
             data-text="&nbsp;Skills"
             onClick={() => setIsNavBarClosed(!isNavBarClosed)}
           >

@@ -37,7 +37,7 @@ const SkillsCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
     {
       id: 1,
       name: 'React',
-      image: '',
+      image: 'https://th.bing.com/th/id/R.f81a6f373c244b1f70f4b7402b5ab372?rik=rbXh4ieLuKt%2bmA&riu=http%3a%2f%2flogos-download.com%2fwp-content%2fuploads%2f2016%2f09%2fReact_logo_logotype_emblem.png&ehk=QhGOkKcUKCU7FBQgHOajOiJqJBACUTD2Ni6LsfqzCEA%3d&risl=&pid=ImgRaw&r=0',
       certificateLink: 'https://example.com/certificate1',
       proficiency: 4, // out of 5
       description: 'Building interactive UIs with React hooks and context API',
@@ -47,13 +47,33 @@ const SkillsCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
     {
       id: 2,
       name: 'JavaScript',
-      image: '/images/js-logo.png',
+      image: 'https://media.geeksforgeeks.org/wp-content/uploads/20190906180444/How-to-Become-a-JavaScript-Developer.png',
       certificateLink: 'https://example.com/certificate2',
       proficiency: 5,
       description: 'Modern ES6+ JavaScript with functional programming',
       yearsExperience: 4,
       projectsUsed: 25
     },
+    {
+      id: 3,
+      name: 'Python',
+      image: 'https://media.geeksforgeeks.org/wp-content/uploads/20190906180444/How-to-Become-a-JavaScript-Developer.png',
+      certificateLink: 'https://example.com/certificate2',
+      proficiency: 5,
+      description: 'Modern ES6+ JavaScript with functional programming',
+      yearsExperience: 4,
+      projectsUsed: 25
+    },
+    {
+      id: 4,
+      name: 'Python',
+      image: 'https://contentstatic.techgig.com/photo/82905582/5-must-have-python-developer-skills-to-be-successful.jpg?91397',
+      certificateLink: 'https://example.com/certificate2',
+      proficiency: 5,
+      description: 'Modern ES6+ JavaScript with functional programming',
+      yearsExperience: 4,
+      projectsUsed: 25
+    }
     // Add more skills as needed
   ];
 

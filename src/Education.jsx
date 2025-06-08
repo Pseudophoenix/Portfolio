@@ -312,9 +312,9 @@ const isActive = location.pathname === '/education';
     },
     {
       title: "Senior Secondary Education",
-      institution: "Modern Public School",
-      year: "2018 - 2020",
-      description: "Completed 12th grade with Physics, Chemistry, and Mathematics as main subjects. Achieved 95% in final examinations and participated in national science olympiad.",
+      institution: "Surevin International School, Niwari",
+      year: "2020 - 2022",
+      description: "Completed 12th grade with Physics, Chemistry, and Mathematics as main subjects and achieved 94.3% in final examinations.",
       images: [
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0001.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0019.jpg",
@@ -325,8 +325,8 @@ const isActive = location.pathname === '/education';
     },
     {
       title: "Secondary Education",
-      institution: "St. Mary's High School",
-      year: "2016 - 2018",
+      institution: "Dayawati Modi Public School, Modinagar",
+      year: "2018 - 2020",
       description: "Completed 10th grade with distinction in Science and Mathematics. Active participant in school's computer club and robotics team.",
       images: [
         ""

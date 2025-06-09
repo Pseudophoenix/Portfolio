@@ -334,7 +334,6 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20191024-WA0001.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20191024-WA0042.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20191024-WA0086.jpg",
-        ""
       ]
     }
   ];

@@ -120,7 +120,7 @@
 
 .project-info h3 {
   margin: 0 0 0.5rem 0;
-  color: #7bfb00;
+  color: #39bd00;
 }
 
 .project-info p {
@@ -137,8 +137,8 @@
 }
 
 .tool-tag {
-  background: rgba(123, 251, 0, 0.1);
-  color: #7bfb00;
+  background: rgba(183, 181, 180, 0.1);
+  color: #39bd00;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -154,7 +154,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #7bfb00;
+  color: #39bd00;
   text-decoration: none;
   font-size: 0.9rem;
   transition: opacity 0.2s;
@@ -167,7 +167,7 @@
 .expand-btn {
   background: none;
   border: none;
-  color: #7bfb00;
+  color: #39bd00;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -192,7 +192,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #7bfb00;
+  color: #39bd00;
   background: rgba(0, 0, 0, 0.7);
 }
 

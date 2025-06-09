@@ -1,14 +1,10 @@
 import "./Blog.css";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRef } from "react";
-import { Resizable } from 'react-resizable';
-import Draggable from 'react-draggable';
-// import 'react-resizable/css/styles.css';
 import React, { useState, useEffect } from 'react';
 import { useLocation, NavLink, redirect } from 'react-router-dom';
 import { FaBars, FaEdit, FaTrash } from 'react-icons/fa';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 const BlogCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   const location = useLocation();
   const isActive = location.pathname === '/blog';
@@ -47,21 +43,7 @@ const BlogCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       setLoading(false);
     }
   };
-  // const editBlog = async (blog) => {
-  //   // // console.log(id);
-  //   // try {
-  //   //   setHtmlCode(blog.html);
-  //   //   setCssCode(blog.css);
-  //   //   setTitle(blog.title);
-  //   //   const respone = await axios.put('http://localhost:3000/api/blog', { data: blog });
-  //   //   console.log(respone);
-  //   //   fetchBlogs();
-  //   // }
-  //   // catch (err) {
-  //   //   setError(err);
-  //   // }
 
-  // }
   const editBlog = async (blog) => {
     setEditingBlog(blog);
     setHtmlCode(blog.html);
@@ -195,14 +177,7 @@ const BlogCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
                   <div className="modal-header">
                     <h2>Edit Blog: {editingBlog?.title}</h2>
                     <div className="header-controls">
-                      {/* <label className="drag-toggle">
-                        <input
-                          type="checkbox"
-                          checked={isDraggable}
-                          onChange={() => setIsDraggable(!isDraggable)}
-                        />
-                        Draggable
-                      </label> */}
+
                       <button onClick={() => setIsEditorOpen(false)} className="close-button">
                         &times;
                       </button>

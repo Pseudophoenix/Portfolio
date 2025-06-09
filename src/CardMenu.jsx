@@ -54,7 +54,7 @@ const CardMenu = ({ isNavBarClosed, setIsNavBarClosed }) => {
             &nbsp;Blog&nbsp;
           </NavLink>
         </li>
-        <li style={{ '--clr': '#7bfb00' }}>
+        <li style={{ '--clr': '#39bd00' }}>
           <NavLink
             to="/project"
             data-text="&nbsp;Project"

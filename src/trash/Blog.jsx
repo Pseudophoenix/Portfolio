@@ -86,3 +86,28 @@
 // };
 
 // export default BlogCard;
+// const editBlog = async (blog) => {
+  //   // // console.log(id);
+  //   // try {
+  //   //   setHtmlCode(blog.html);
+  //   //   setCssCode(blog.css);
+  //   //   setTitle(blog.title);
+  //   //   const respone = await axios.put('http://localhost:3000/api/blog', { data: blog });
+  //   //   console.log(respone);
+  //   //   fetchBlogs();
+  //   // }
+  //   // catch (err) {
+  //   //   setError(err);
+  //   // }
+
+  // }
+
+
+    {/* <label className="drag-toggle">
+                        <input
+                          type="checkbox"
+                          checked={isDraggable}
+                          onChange={() => setIsDraggable(!isDraggable)}
+                        />
+                        Draggable
+                      </label> */}

@@ -174,7 +174,7 @@ const ProjectCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       transition={{ duration: 0.3 }}
     >
       <div className='card-header' style={{ background: '#7bfb00', '--clr': '#7bfb00' }}>
-        <h2>Live Project Previews</h2>
+        <h2>Projects</h2>
         <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}>
           <FaBars />
         </NavLink>

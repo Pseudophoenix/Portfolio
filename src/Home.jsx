@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div style={{
-      margin:0,
+      margin: 0,
       // width:"100%",
       display: 'flex',
       flexDirection: 'row',
@@ -16,32 +16,32 @@ function App() {
       justifyContent: 'center',
       // // height: '100vh',
       color: 'white',
-      overflow:'hidden',
+      overflow: 'hidden',
       // textAlign: 'center',
       padding: '2rem',
-        // height: 'calc(110vh - 0px)'
+      // height: 'calc(110vh - 0px)'
     }}>
-    <Router>
-      <div style={{ 
-        // display: 'flex', flexDirection: 'column' 
+      <Router>
+        <div style={{
+          // display: 'flex', flexDirection: 'column' 
           height: '100%'
         }}>
-        <CardMenu 
-          isNavBarClosed={isNavBarClosed} 
-          setIsNavBarClosed={setIsNavBarClosed}  // ✅ Pass the setter directly
-        />
-      </div>
+          <CardMenu
+            isNavBarClosed={isNavBarClosed}
+            setIsNavBarClosed={setIsNavBarClosed}  // ✅ Pass the setter directly
+          />
+        </div>
 
-      <Routes>
-        {/* Pass UPDATED STATE CONSISTENTLY to all cards */}
-        {/* <Route path="/" element={<CardMenu isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} /> */}
-        <Route path="/home" element={<HomeCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
-        <Route path="/skills" element={<SkillsCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
-        <Route path="/education" element={<EducationCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
-        <Route path="/blog" element={<BlogCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
-        <Route path="/project" element={<ProjectCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
-      </Routes>
-    </Router>
+        <Routes>
+          {/* Pass UPDATED STATE CONSISTENTLY to all cards */}
+          {/* <Route path="/" element={<CardMenu isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} /> */}
+          <Route path="/home" element={<HomeCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
+          <Route path="/skills" element={<SkillsCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
+          <Route path="/education" element={<EducationCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
+          <Route path="/blog" element={<BlogCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
+          <Route path="/project" element={<ProjectCard isNavBarClosed={isNavBarClosed} setIsNavBarClosed={setIsNavBarClosed} />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

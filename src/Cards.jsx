@@ -19,9 +19,8 @@ const HomeCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
         <h2>Intro</h2>
         <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
       </div>
-      {/* <h2>Home</h2> */}
       <div className="card-content">
-        <h3>Alok!</h3>
+      <h3>Hi! I am Alok</h3>
       </div>
     </div>
   );
@@ -49,17 +48,17 @@ const SkillsCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       name: 'JavaScript',
       image: 'https://media.geeksforgeeks.org/wp-content/uploads/20190906180444/How-to-Become-a-JavaScript-Developer.png',
       certificateLink: 'https://example.com/certificate2',
-      proficiency: 5,
+      proficiency: 4,
       description: 'Modern ES6+ JavaScript with functional programming',
       yearsExperience: 4,
       projectsUsed: 25
     },
     {
       id: 3,
-      name: 'Python',
-      image: 'https://media.geeksforgeeks.org/wp-content/uploads/20190906180444/How-to-Become-a-JavaScript-Developer.png',
+      name: 'NextJS',
+      image: 'https://storage.googleapis.com/portfolio-pseudophoenix/10310009.png',
       certificateLink: 'https://example.com/certificate2',
-      proficiency: 5,
+      proficiency: 3,
       description: 'Modern ES6+ JavaScript with functional programming',
       yearsExperience: 4,
       projectsUsed: 25
@@ -69,9 +68,19 @@ const SkillsCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       name: 'Python',
       image: 'https://contentstatic.techgig.com/photo/82905582/5-must-have-python-developer-skills-to-be-successful.jpg?91397',
       certificateLink: 'https://example.com/certificate2',
-      proficiency: 5,
+      proficiency: 4.5,
       description: 'Modern ES6+ JavaScript with functional programming',
       yearsExperience: 4,
+      projectsUsed: 25
+    },
+    {
+      id: 5,
+      name: 'DevOps',
+      image: 'https://storage.googleapis.com/portfolio-pseudophoenix/2648921.jpg',
+      certificateLink: 'https://example.com/certificate2',
+      proficiency: 4.25,
+      description: 'Modern ES6+ JavaScript with functional programming',
+      yearsExperience: 2,
       projectsUsed: 25
     }
     // Add more skills as needed

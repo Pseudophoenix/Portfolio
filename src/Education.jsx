@@ -331,9 +331,9 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       description: "Completed 10th grade with distinction in Science and Mathematics. Active participant in school's computer club and robotics team. Scored 97.1% and ranked 3rd in school.",
       images: [
         "https://storage.googleapis.com/portfolio-pseudophoenix/1.jpeg",
-        "",
-        "",
-        "",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20191024-WA0001.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20191024-WA0042.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20191024-WA0086.jpg",
         ""
       ]
     }

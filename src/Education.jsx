@@ -299,10 +299,10 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   const isActive = location.pathname === '/education';
   const educationData = [
     {
-      title: "College Degree",
-      institution: "University of Technology",
-      year: "2020 - 2024",
-      description: "Bachelor of Science in Computer Science with specialization in Artificial Intelligence. Graduated with honors and completed several research projects in machine learning.",
+      title: "Bachelor of Technology, Computer Science & Engineering",
+      institution: "Indian Institute of Information Technology, Senapati Manipur",
+      year: "2022 - 2026",
+      description: "Pursuing",
       images: [
         "https://storage.googleapis.com/portfolio-pseudophoenix/1000006407%20(3).jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG_20240201_202220.jpg",
@@ -329,11 +329,11 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       year: "2018 - 2020",
       description: "Completed 10th grade with distinction in Science and Mathematics. Active participant in school's computer club and robotics team.",
       images: [
-        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0001.jpg",
-        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0019.jpg",
-        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0020.jpg",
-        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0006.jpg",
-        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0035.jpg"
+        "",
+        "",
+        "",
+        "",
+        ""
       ]
     }
   ];

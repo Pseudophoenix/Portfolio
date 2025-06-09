@@ -8,24 +8,24 @@ const Contact = ({ isNavBarClosed, setIsNavBarClosed }) => {
     const socialMediaData = [
         {
             id: 1,
-            name: 'Twitter',
-            handle: '@yourusername',
-            logo: 'https://cdn-icons-png.flaticon.com/512/124/124021.png',
+            name: 'Kaggle',
+            handle: '@pseudophoenix',
+            logo: 'https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-kaggle-an-online-community-of-data-scientists-and-machine-learners-owned-by-google-logo-color-tal-revivo.png',
             url: 'https://twitter.com/yourusername'
         },
         {
             id: 2,
             name: 'LinkedIn',
-            handle: 'linkedin.com/in/yourprofile',
+            handle: 'linkedin.com/in/alok-choudhary-9465401ab/',
             logo: 'https://cdn-icons-png.flaticon.com/512/174/174857.png',
-            url: 'https://linkedin.com/in/yourprofile'
+            url: 'https://www.linkedin.com/in/alok-choudhary-9465401ab/'
         },
         {
             id: 3,
             name: 'GitHub',
-            handle: 'github.com/yourusername',
+            handle: 'github.com/Pseudophoenix',
             logo: 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
-            url: 'https://github.com/yourusername'
+            url: 'https://github.com/Pseudophoenix'
         }
     ];
     const [formData, setFormData] = useState({

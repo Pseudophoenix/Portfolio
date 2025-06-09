@@ -178,6 +178,7 @@ h2 {
   }
   
   .social-item {
+    width: 247px;
     flex-direction: row !important;
   }
 }

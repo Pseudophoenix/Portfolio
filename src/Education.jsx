@@ -296,7 +296,7 @@ import './Education.css';
 
 const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-const isActive = location.pathname === '/education';
+  const isActive = location.pathname === '/education';
   const educationData = [
     {
       title: "College Degree",
@@ -329,7 +329,36 @@ const isActive = location.pathname === '/education';
       year: "2018 - 2020",
       description: "Completed 10th grade with distinction in Science and Mathematics. Active participant in school's computer club and robotics team.",
       images: [
-        ""
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0001.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0019.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0020.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0006.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0035.jpg"
+      ]
+    },
+    {
+      title: "Secondary Education",
+      institution: "Dayawati Modi Public School, Modinagar",
+      year: "2018 - 2020",
+      description: "Completed 10th grade with distinction in Science and Mathematics. Active participant in school's computer club and robotics team.",
+      images: [
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0001.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0019.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0020.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0006.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0035.jpg"
+      ]
+    }, {
+      title: "Secondary Education",
+      institution: "Dayawati Modi Public School, Modinagar",
+      year: "2018 - 2020",
+      description: "Completed 10th grade with distinction in Science and Mathematics. Active participant in school's computer club and robotics team.",
+      images: [
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0001.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0019.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0020.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0006.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0035.jpg"
       ]
     }
   ];
@@ -371,102 +400,103 @@ const isActive = location.pathname === '/education';
       </div>
       <div className='card-body'>
 
-      <div className='education-content'>
-        {educationData.map((edu, index) => (
-          <div
-            key={index}
-            className={`education-item ${index % 2 === 0 ? 'left-text' : 'left-image'}`}
-            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
-          >
-            {index === 0 && edu.images ? (
-              <>
-                <div className="education-text">
-                  <h3>{edu.title}</h3>
-                  <h4>{edu.institution}</h4>
-                  <p className="education-year">{edu.year}</p>
-                  <p className="education-description">{edu.description}</p>
-                </div>
-                <div className="education-image-container">
-                  <div className="image-carousel">
-                    {edu.images.map((img, imgIndex) => (
-                      <div
-                        key={imgIndex}
-                        className={`carousel-slide ${imgIndex === currentSlide ? 'active' : ''}`}
-                      >
-                        <img
-                          src={img}
-                          alt={`${edu.title} ${imgIndex + 1}`}
-                          className="education-image"
-                        />
-                      </div>
-                    ))}
-                    <div className="carousel-dots">
-                      {edu.images.map((_, dotIndex) => (
-                        <span
-                          key={dotIndex}
-                          className={`dot ${dotIndex === currentSlide ? 'active' : ''}`}
-                          onClick={() => handleDotClick(dotIndex)}
-                        />
+        <div className='education-content'>
+          {educationData.map((edu, index) => (
+            <div
+              key={index}
+              className={`education-item ${index % 2 === 0 ? 'lefta-text' : 'lefta-image'}`}
+              data-aos={index % 2 === 0 ? "fade-aright" : "fade-aleft"}
+            >
+              {index === 0 && edu.images ? (
+                <>
+                  <div className="education-text">
+                    <h3>{edu.title}</h3>
+                    <h4>{edu.institution}</h4>
+                    <p className="education-year">{edu.year}</p>
+                    <p className="education-description">{edu.description}</p>
+                  </div>
+                  <div className="education-image-container">
+                    <div className="image-carousel">
+                      {edu.images.map((img, imgIndex) => (
+                        <div
+                          key={imgIndex}
+                          className={`carousel-slide ${imgIndex === currentSlide ? 'active' : ''}`}
+                        >
+                          {/* {console.log(images)} */}
+                          <img
+                            src={img}
+                            alt={`${edu.title} ${imgIndex + 1}`}
+                            className="education-image"
+                          />
+                        </div>
                       ))}
+                      <div className="carousel-dots">
+                        {edu.images.map((_, dotIndex) => (
+                          <span
+                            key={dotIndex}
+                            className={`dot ${dotIndex === currentSlide ? 'active' : ''}`}
+                            onClick={() => handleDotClick(dotIndex)}
+                          />
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </>
-            ) : index % 2 === 0 ? (
-              <>
-                <div className="education-text">
-                  <h3>{edu.title}</h3>
-                  <h4>{edu.institution}</h4>
-                  <p className="education-year">{edu.year}</p>
-                  <p className="education-description">{edu.description}</p>
-                </div>
-                <div className="education-image-container">
-                  <div className="image-carousel">
-                    {edu.images.map((img, imgIndex) => (
-                      <div
-                        key={imgIndex}
-                        className={`carousel-slide ${imgIndex === currentSlide ? 'active' : ''}`}
-                      >
-                        <img
-                          src={img}
-                          alt={`${edu.title} ${imgIndex + 1}`}
-                          className="education-image"
-                        />
-                      </div>
-                    ))}
-                    <div className="carousel-dots">
-                      {edu.images.map((_, dotIndex) => (
-                        <span
-                          key={dotIndex}
-                          className={`dot ${dotIndex === currentSlide ? 'active' : ''}`}
-                          onClick={() => handleDotClick(dotIndex)}
-                        />
+                </>
+              ) : index % 2 === 0 ? (
+                <>
+                  <div className="education-text">
+                    <h3>{edu.title}</h3>
+                    <h4>{edu.institution}</h4>
+                    <p className="education-year">{edu.year}</p>
+                    <p className="education-description">{edu.description}</p>
+                  </div>
+                  <div className="education-image-container">
+                    <div className="image-carousel">
+                      {edu.images.map((img, imgIndex) => (
+                        <div
+                          key={imgIndex}
+                          className={`carousel-slide ${imgIndex === currentSlide ? 'active' : ''}`}
+                        >
+                          <img
+                            src={img}
+                            alt={`${edu.title} ${imgIndex + 1}`}
+                            className="education-image"
+                          />
+                        </div>
                       ))}
+                      <div className="carousel-dots">
+                        {edu.images.map((_, dotIndex) => (
+                          <span
+                            key={dotIndex}
+                            className={`dot ${dotIndex === currentSlide ? 'active' : ''}`}
+                            onClick={() => handleDotClick(dotIndex)}
+                          />
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="education-image-container">
-                  <img
-                    src={edu.image}
-                    alt={edu.title}
-                    className="education-image"
-                  />
-                </div>
-                <div className="education-text">
-                  <h3>{edu.title}</h3>
-                  <h4>{edu.institution}</h4>
-                  <p className="education-year">{edu.year}</p>
-                  <p className="education-description">{edu.description}</p>
-                </div>
-              </>
-            )}
-          </div>
-        ))}
+                </>
+              ) : (
+                <>
+                  <div className="education-image-container">
+                    <img
+                      src={edu.image}
+                      alt={edu.title}
+                      className="education-image"
+                    />
+                  </div>
+                  <div className="education-text">
+                    <h3>{edu.title}</h3>
+                    <h4>{edu.institution}</h4>
+                    <p className="education-year">{edu.year}</p>
+                    <p className="education-description">{edu.description}</p>
+                  </div>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </div>
   );
 };

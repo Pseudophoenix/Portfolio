@@ -316,10 +316,10 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       year: "2020 - 2022",
       description: "Completed 12th grade with Physics, Chemistry, and Mathematics as main subjects and achieved 94.3% in final examinations and ranked 5th position in school.",
       images: [
-        "https://storage.googleapis.com/portfolio-pseudophoenix/482222098_3932598280334267_5995637256767237398_n.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/482260096_3932387313688697_4131085957098344810_n.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0019.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0020.jpg",
+        "https://storage.googleapis.com/portfolio-pseudophoenix/482222098_3932598280334267_5995637256767237398_n.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0006.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0035.jpg"
       ]

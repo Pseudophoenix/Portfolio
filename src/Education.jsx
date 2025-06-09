@@ -341,7 +341,7 @@ const isActive = location.pathname === '/education';
 
     const interval = setInterval(() => {
       setCurrentSlide(prev => (prev + 1) % collegeItem.images.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [educationData]);

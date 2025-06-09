@@ -302,7 +302,7 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       title: "Bachelor of Technology, Computer Science & Engineering",
       institution: "Indian Institute of Information Technology, Senapati Manipur",
       year: "2022 - 2026",
-      description: "Pursuing",
+      description: "Currenlty Pursuing and holding a CPI of 8.55 till 6th semester.",
       images: [
         "https://storage.googleapis.com/portfolio-pseudophoenix/1000006407%20(3).jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG_20240201_202220.jpg",
@@ -314,7 +314,7 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       title: "Senior Secondary Education",
       institution: "Surevin International School, Niwari",
       year: "2020 - 2022",
-      description: "Completed 12th grade with Physics, Chemistry, and Mathematics as main subjects and achieved 94.3% in final examinations.",
+      description: "Completed 12th grade with Physics, Chemistry, and Mathematics as main subjects and achieved 94.3% in final examinations and ranked 5th position in school.",
       images: [
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0001.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0019.jpg",
@@ -327,7 +327,7 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       title: "Secondary Education",
       institution: "Dayawati Modi Public School, Modinagar",
       year: "2018 - 2020",
-      description: "Completed 10th grade with distinction in Science and Mathematics. Active participant in school's computer club and robotics team.",
+      description: "Completed 10th grade with distinction in Science and Mathematics. Active participant in school's computer club and robotics team. Scored 97.1% and ranked 3rd in school.",
       images: [
         "",
         "",

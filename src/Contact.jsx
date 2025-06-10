@@ -51,7 +51,7 @@ const Contact = ({ isNavBarClosed, setIsNavBarClosed }) => {
     return (
 
         <div className={`card ${isActive ? 'card-visible' : ''}`}>
-            <div className='card-header' style={{ '--clr': ' ' }}>
+            <div className='card-header' style={{ background: '#7bfb99', '--clr': '#7bfb99' }}>
                 <h2>Contact</h2>
                 <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
             </div>

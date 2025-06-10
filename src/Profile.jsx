@@ -11,7 +11,7 @@ const Profile = () => {
         {/* <h3>
           A passionate software developer from India
         </h3> */}
-        <div className="badges">
+        <div className="badges tech-icons" >
           <span className="badge">Open Source Contributor</span>
           <span className="badge">Full Stack Developer</span>
         </div>

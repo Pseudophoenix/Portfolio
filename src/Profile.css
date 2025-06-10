@@ -70,8 +70,9 @@ h3, h4 {
 }
 
 .tech-icons span {
-  background-color: #e9f5ff;
+  background-color: #d6edff;
   padding: 0.4rem 0.8rem;
+  color: #008cff;
   border-radius: 4px;
   font-size: 0.9rem;
 }

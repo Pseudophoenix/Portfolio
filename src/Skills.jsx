@@ -11,7 +11,7 @@ const SkillsCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   const skills = [
     {
       id: 1,
-      name: 'React',
+      name: 'Backend',
       image: 'https://th.bing.com/th/id/R.f81a6f373c244b1f70f4b7402b5ab372?rik=rbXh4ieLuKt%2bmA&riu=http%3a%2f%2flogos-download.com%2fwp-content%2fuploads%2f2016%2f09%2fReact_logo_logotype_emblem.png&ehk=QhGOkKcUKCU7FBQgHOajOiJqJBACUTD2Ni6LsfqzCEA%3d&risl=&pid=ImgRaw&r=0',
       certificateLink: 'https://example.com/certificate1',
       proficiency: 4, // out of 5
@@ -21,7 +21,7 @@ const SkillsCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
     },
     {
       id: 2,
-      name: 'JavaScript',
+      name: 'Frontend',
       image: 'https://media.geeksforgeeks.org/wp-content/uploads/20190906180444/How-to-Become-a-JavaScript-Developer.png',
       certificateLink: 'https://example.com/certificate2',
       proficiency: 4,
@@ -31,7 +31,7 @@ const SkillsCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
     },
     {
       id: 3,
-      name: 'NextJS',
+      name: 'ML/DL',
       image: 'https://storage.googleapis.com/portfolio-pseudophoenix/10310009.png',
       certificateLink: 'https://example.com/certificate2',
       proficiency: 3,
@@ -41,7 +41,7 @@ const SkillsCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
     },
     {
       id: 4,
-      name: 'Python',
+      name: '',
       image: 'https://contentstatic.techgig.com/photo/82905582/5-must-have-python-developer-skills-to-be-successful.jpg?91397',
       certificateLink: 'https://example.com/certificate2',
       proficiency: 4.5,

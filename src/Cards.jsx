@@ -7,6 +7,7 @@ import EducationCard from './Education';
 import ContactCard from './Contact';
 import { NavLink } from 'react-router-dom';
 import ProjectCard from './Projects';
+import Profile from './Profile';
 const HomeCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   const location = useLocation();
   const isActive = location.pathname === '/' || location.pathname === '/home';
@@ -18,8 +19,9 @@ const HomeCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
         <NavLink to="/" className={isNavBarClosed ? 'cross-button-closed' : 'cross-button-open'} onClick={() => setIsNavBarClosed(!isNavBarClosed)}><FaBars /></NavLink>
       </div>
       <div className="card-content">
-        <h3>Hi! I am Alok</h3>
-        A passionate Software Developer from India.
+        {/* <h3>Hi! I am Alok</h3>
+        A passionate Software Developer from India. */}
+        <Profile></Profile>
         {/* <h1 class="about-title">OUR TEAM</h1> */}
 
         {/* <div class="carousel-container">

@@ -26,10 +26,10 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       images: [
         "https://storage.googleapis.com/portfolio-pseudophoenix/482260096_3932387313688697_4131085957098344810_n.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0019.jpg",
-        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0020.jpg",
+        // "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0020.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/482222098_3932598280334267_5995637256767237398_n.jpg",
-        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0006.jpg",
-        "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0035.jpg"
+        // "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0006.jpg",
+        // "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20220730-WA0035.jpg"
       ]
     },
     {
@@ -41,7 +41,7 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20191024-WA0042.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20191024-WA0086.jpg",
         "https://storage.googleapis.com/portfolio-pseudophoenix/IMG-20191 024-WA0001.jpg",
-        "https://storage.googleapis.com/portfolio-pseudophoenix/1.jpeg"
+        // "https://storage.googleapis.com/portfolio-pseudophoenix/1.jpeg"  
       ]
     }
   ];
@@ -50,9 +50,9 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   useEffect(() => {
     const collegeItem = educationData.find(item => item.images);
     if (!collegeItem) return;
-
+    console.log(collegeItem.title);
     const interval = setInterval(() => {
-      setCurrentSlide(prev => (prev + 1) % collegeItem.images.length);
+      setCurrentSlide(prev => ((prev + 1) % collegeItem.images.length));
     }, 3000);
 
     return () => clearInterval(interval);
@@ -80,7 +80,7 @@ const EducationCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
               className={`education-item ${index % 2 === 0 ? 'lefta-text' : 'lefta-image'}`}
               data-aos={index % 2 === 0 ? "fade-aright" : "fade-aleft"}
             >
-              {index === 0 && edu.images ? (
+              { edu.images ? (
                 <>
                   <div className="education-text">
                     <h3>{edu.title}</h3>

@@ -18,7 +18,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ "blogs": blogs },
         {
             headers: {
-                'Access-Control-Allow-Origin': 'http://localhost:5174',
+                'Access-Control-Allow-Origin': 'http://localhost:5173',
                 'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
                 'Access-Control-Allow-Headers': 'Content-Type',
             },

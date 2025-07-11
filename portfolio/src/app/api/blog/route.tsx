@@ -32,18 +32,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         },
     });
 }
-export async function GET(req: NextRequest, res: NextResponse) {
-    const response = NextResponse.next();
-    // Set CORS headers
-    response.headers.set('Access-Control-Allow-Origin', 'http://localhost:5173'); // Replace '*' with your React app's URL (e.g., 'http://localhost:3001')
-    response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
-    // Handle preflight requests (OPTIONS)
-    if (req.method === 'OPTIONS') {
-        return NextResponse.json({}, { status: 200, headers: response.headers });
-    }
-}
 export async function DELETE(req: NextRequest) {
 
     // const body =  req;

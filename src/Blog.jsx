@@ -1,14 +1,10 @@
 import "./Blog.css";
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRef } from "react";
-import { Resizable } from 'react-resizable';
-// import Draggable from 'react-draggable';
-// import 'react-resizable/css/styles.css';
 import React, { useState, useEffect } from 'react';
 import { useLocation, NavLink, redirect } from 'react-router-dom';
 import { FaBars, FaEdit, FaTrash } from 'react-icons/fa';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 const BlogCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   const location = useLocation();
   const isActive = location.pathname === '/blog';
@@ -47,21 +43,7 @@ const BlogCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
       setLoading(false);
     }
   };
-  // const editBlog = async (blog) => {
-  //   // // console.log(id);
-  //   // try {
-  //   //   setHtmlCode(blog.html);
-  //   //   setCssCode(blog.css);
-  //   //   setTitle(blog.title);
-  //   //   const respone = await axios.put('http://localhost:3000/api/blog', { data: blog });
-  //   //   console.log(respone);
-  //   //   fetchBlogs();
-  //   // }
-  //   // catch (err) {
-  //   //   setError(err);
-  //   // }
 
-  // }
   const editBlog = async (blog) => {
     setEditingBlog(blog);
     console.log(blog);
@@ -173,6 +155,119 @@ const BlogCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
             </div>
           </div>
         </div>
+        <AnimatePresence>
+          {isEditorOpen && (
+            <>
+              <motion.div
+                className="overlay"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setIsEditorOpen(false)}
+              >
+                <motion.div
+                  className="edit-modal"
+                  style={{
+                    width: modalSize.width + 'px',
+                    height: modalSize.height + 'px'
+                  }}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+                >
+                  <div className="modal-header">
+                    <h2>Edit Blog: {editingBlog?.title}</h2>
+                    <div className="header-controls">
+
+                      <button onClick={() => setIsEditorOpen(false)} className="close-button">
+                        &times;
+                      </button>
+                    </div>
+                  </div>
+
+                  <div className="blog-editor-container" style={{ height: 'calc(100% - 60px)' }}>
+                    <div className="blog-controls">
+                      <input
+                        type="text"
+                        value={title}
+                        onChange={(e) => setTitle(e.target.value)}
+                        placeholder="Blog post title"
+                        className="blog-title-input"
+                      />
+                      <button
+                        onClick={async () => {
+                          try {
+                            const response = await axios.put('http://localhost:3000/api/blog', {
+                              data: {
+                                id: editingBlog.id,
+                                title,
+                                html: htmlCode,
+                                css: cssCode
+                              }
+                            });
+                            console.log(response);
+                            fetchBlogs();
+                            setIsEditorOpen(false);
+                          } catch (err) {
+                            setError(err);
+                          }
+                        }}
+                        className="save-button"
+                        disabled={loading}
+                      >
+                        {loading ? 'Saving...' : 'Update Blog'}
+                      </button>
+                    </div>
+
+                    <div className="blog-editor-columns" style={{ height: 'calc(100% - 50px)' }}>
+                      <div className="editor-column">
+                        <h3>HTML Editor</h3>
+                        <textarea
+                          value={htmlCode}
+                          onChange={(e) => setHtmlCode(e.target.value)}
+                          className="code-editor html-editor"
+                          spellCheck="false"
+                        />
+                      </div>
+
+                      <div className="editor-column">
+                        <h3>CSS Editor</h3>
+                        <textarea
+                          value={cssCode}
+                          onChange={(e) => setCssCode(e.target.value)}
+                          className="code-editor css-editor"
+                          spellCheck="false"
+                        />
+                      </div>
+
+                      <div className="preview-column">
+                        <h3>Live Preview</h3>
+                        <div className="blog-preview">
+                          <iframe
+                            title="blog-preview"
+                            srcDoc={`
+                          <!DOCTYPE html>
+                          <html>
+                          <head>
+                            <style>${cssCode}</style>
+                          </head>
+                          <body>
+                            ${htmlCode}
+                          </body>
+                          </html>
+                        `}
+                            className="preview-iframe"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
         {/* Blog Posts Section */}
         <div className="blog-posts-section">
           <h2>Saved Blog Posts</h2>

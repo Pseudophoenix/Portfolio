@@ -272,4 +272,12 @@
   background-origin: content-box;
   box-sizing: border-box;
   cursor: se-resize;
-} */
+}
+@media (max-width: 768px) {
+  .blog-editor-columns{
+    flex-direction: column;
+  }
+  
+}
+
+*/

@@ -182,14 +182,17 @@
   border-radius: 4px;
   margin-bottom: 15px;
 }
+
 /* Overlay Editor Styles */
 .overlay {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   display: flex;
   right: 0;
-  height: 140%;
+  height: -webkit-fill-available;
+  padding: 20px;
+  margin:0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
@@ -197,13 +200,15 @@
 }
 
 .edit-modal {
-
   position: relative;
-  margin:auto auto auto auto;
+  margin: auto auto auto auto;
   background-color: white;
+  color: hwb(0deg 20% 80%);;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   z-index: 200;
+  width: auto;
+  height: auto;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -212,13 +217,12 @@
 
 .modal-header {
   display: flex;
-  
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #eee;
-  cursor: move;
+  /* cursor: move; */
 }
 
 .header-controls {
@@ -255,7 +259,7 @@
 }
 
 /* Resizable handle styling */
-.react-resizable-handle {
+/* .react-resizable-handle {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -268,4 +272,4 @@
   background-origin: content-box;
   box-sizing: border-box;
   cursor: se-resize;
-}
+} */

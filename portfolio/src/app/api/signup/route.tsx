@@ -11,6 +11,6 @@ export async function POST(req: NextRequest) {
     });
     return NextResponse.json({
         body:body,
-        name:"ALok"
+        name:"Alok"
     })
 }

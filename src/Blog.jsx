@@ -30,7 +30,7 @@ const BlogCard = ({ isNavBarClosed, setIsNavBarClosed }) => {
   const fetchBlogs = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:3000/api/blogs'); // Replace with your actual API endpoint
+      const response = await axios.get('https://portfolio-6yda.onrender.com/api/blogs'); // Replace with your actual API endpoint
       console.log(response.data.blogs);
       setBlogs(response.data.blogs);
       // setBlogs([{title:"sad",html:"asd",css:"asd"}]);
